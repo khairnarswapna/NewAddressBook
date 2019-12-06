@@ -4,15 +4,7 @@
     "lastName": "Mhatre",
     "phoneNumber": "9405205089",
     "city": "Pune ",
-    "zip": "100345",
-    "state": "Mh"
-  },
-  {
-    "firstName": "swati",
-    "lastName": "More",
-    "phoneNumber": "94052050566",
-    "city": "Pune",
-    "zip": "556782",
+    "zip": 100345,
     "state": "Mh"
   },
   {
@@ -20,7 +12,15 @@
     "lastName": "khairnar",
     "phoneNumber": "9405205088",
     "city": "Dhule  ",
-    "zip": "100345",
+    "zip": 100360,
+    "state": "Mh"
+  },
+  {
+    "firstName": "swati",
+    "lastName": "More",
+    "phoneNumber": "94052050566",
+    "city": "Pune",
+    "zip": 556782,
     "state": "Mh"
   }
 ]

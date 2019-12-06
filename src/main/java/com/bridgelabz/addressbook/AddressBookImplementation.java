@@ -91,6 +91,22 @@ public class AddressBookImplementation implements IAddressBook {
         return personList;
     }
     @Override
+    public List<Person> sortByZip() throws IOException {
+        List<Person> personList = utility.readAllPersonsAddressList();
+        for(int i=0;i<personList.size()-1;i++){
+            for(int j=0;j<personList.size()-i-1;j++){
+                if(personList.get(j).getZip()<personList.get(j+1).getZip()){
+                    Person tempObj=personList.get(j);
+                    personList.set(j,personList.get(j+1));
+                    personList.set(j+1,tempObj);
+                }
+            }
+        }
+        utility.writeIntoJsonFile(personList);
+        return personList;
+    }
+
+    @Override
     public void readAllPersons() throws FileNotFoundException, MalformedJsonException {
         utility.readList();
 

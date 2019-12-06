@@ -10,6 +10,7 @@ public interface IAddressBook {
         boolean editPerson(Person person, String mobileNumber) throws FileNotFoundException;
         boolean deletePerson(String mobileNumber) throws FileNotFoundException, CustomException;
         List<Person> sortByLastName() throws IOException;
+        List<Person> sortByZip() throws IOException;
         public void readAllPersons()throws Exception;
 
 }

@@ -1,16 +1,13 @@
 package com.bridgelabz.addressbook;
-
-
-
 public class Person {
     private String firstName;
     private String lastName;
     private String phoneNumber;
     private String city;
-    private String zip;
+    private int zip;
     private String state;
 
-    public Person(String firstName, String lastName, String phoneNumber, String city, String zip, String state) {
+    public Person(String firstName, String lastName, String phoneNumber, String city, int zip, String state) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
@@ -51,11 +48,11 @@ public class Person {
         this.city = city;
     }
 
-    public String getZip() {
+    public int getZip() {
         return zip;
     }
 
-    public void setZip(String zip) {
+    public void setZip(int zip) {
         this.zip = zip;
     }
 

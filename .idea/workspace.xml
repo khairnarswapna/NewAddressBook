@@ -15,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/addressbook/AddressBookImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/addressbook/AddressBookImplementation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/addressbook/IAddressBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/addressbook/IAddressBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/addressbook/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/bridgelabz/addressbook/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/AddressBookTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/AddressBookTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/AddressBookTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/AddressBookTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
@@ -24,8 +25,10 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/addressbook/Address.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/addressbook/AddressBookImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/addressbook/AddressBookImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/addressbook/IAddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/addressbook/IAddressBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bridgelabz/addressbook/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/addressbook/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Person.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Person.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AddressBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddressBookTest.java" afterDir="false" />
     </list>
@@ -83,33 +86,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AddressBookTest.sortAddressbook_ByLastname_ShouldReturnExpectedValue">
+  <component name="RunManager" selected="Gradle.AddressBookTest.sortAddressbook_ByZip_ShouldReturnExpectedValue">
     <configuration name="AddressBookTest.givenMobileNumber_WhenNotavilable_whileRemovingRecord_ExceptionShown" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;AddressBookTest.givenMobileNumber_WhenNotavilable_whileRemovingRecord_ExceptionShown&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="AddressBookTest.givenMobileNumber_WhenPresent_ShouldRemovePersonDetails_FromAddressBook" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;AddressBookTest.givenMobileNumber_WhenPresent_ShouldRemovePersonDetails_FromAddressBook&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -184,13 +167,33 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="AddressBookTest.sortAddressbook_ByZip_ShouldReturnExpectedValue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;AddressBookTest.sortAddressbook_ByZip_ShouldReturnExpectedValue&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AddressBookTest.sortAddressbook_ByZip_ShouldReturnExpectedValue" />
         <item itemvalue="Gradle.AddressBookTest.sortAddressbook_ByLastname_ShouldReturnExpectedValue" />
         <item itemvalue="Gradle.AddressBookTest.givenMobileNumber_WhenNotavilable_whileRemovingRecord_ExceptionShown" />
         <item itemvalue="Gradle.AddressBookTest.givenPersonInWrittenToJson_Should_ReturnTrue" />
         <item itemvalue="Gradle.AddressBookTest.givenPersonDetails_When_EdittedSuccessfully_Should_ReturnTrue" />
-        <item itemvalue="Gradle.AddressBookTest.givenMobileNumber_WhenPresent_ShouldRemovePersonDetails_FromAddressBook" />
       </list>
     </recent_temporary>
   </component>

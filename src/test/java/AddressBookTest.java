@@ -10,14 +10,14 @@ public class AddressBookTest {
     IAddressBook iAddressBook = new AddressBookImplementation();
     @Test
     public void givenPersonInWrittenToJson_Should_ReturnTrue() throws FileNotFoundException {
-        Person person = new Person("yamini ", "Mhatre","9405205089","Pune ", "100345", "Mh");
+        Person person = new Person("yamini ", "Mhatre","9405205089","Pune ", 100345, "Mh");
         boolean result =iAddressBook.addPerson(person, "/home/admin142/eclipse-workspace/AddressBook2/src/main/resources/Person.json");
         Assert.assertEquals(true, result);
 
     }
     @Test
     public void givenPersonDetails_When_EdittedSuccessfully_Should_ReturnTrue() throws FileNotFoundException {
-        Person person = new Person("swati", "More", "94052050566", "Pune", "556782", "MH");
+        Person person = new Person("swati", "More", "94052050566", "Pune", 556782, "MH");
         boolean result = iAddressBook.editPerson(person, "9405205050");
         Assert.assertTrue(result);
     }
@@ -37,7 +37,11 @@ public class AddressBookTest {
         List<Person> personList = iAddressBook.sortByLastName();
         Assert.assertEquals("Mhatre",personList.get(0).getLastName());
     }
-
+    @Test
+    public void sortAddressbook_ByZip_ShouldReturnExpectedValue() throws Exception {
+        List<Person> personList = iAddressBook.sortByZip();
+        Assert.assertEquals(556782,personList.get(0).getZip());
+    }
 
 
 }
