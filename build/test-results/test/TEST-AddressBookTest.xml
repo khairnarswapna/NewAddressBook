@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T09:43:57" hostname="admin142-desktop" time="0.008">
+<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T10:42:14" hostname="admin142-desktop" time="0.003">
   <properties/>
-  <testcase name="sortAddressbook_ByZip_ShouldReturnExpectedValue" classname="AddressBookTest" time="0.008"/>
-  <system-out><![CDATA[Person{firstName='yamini ', lastName='Mhatre', phoneNumber='9405205089', city='Pune ', zip='100345', state='Mh'}
-Person{firstName='sneha ', lastName='khairnar', phoneNumber='9405205088', city='Dhule  ', zip='100360', state='Mh'}
-Person{firstName='swati', lastName='More', phoneNumber='94052050566', city='Pune', zip='556782', state='Mh'}
+  <testcase name="givenPersonDetail_WhenProperPrintAllRecord_ShouldReturnTrue" classname="AddressBookTest" time="0.003"/>
+  <system-out><![CDATA[Person{firstName='yamini ', lastName='Mhatre', phoneNumber='9405205089', Address='G.T.P colony', city='pune', zip=345678, state='Mh'}
+First Name:- yamini  Last Name:- Mhatre
+Phone Number:9405205089
+Address:- G.T.P colony
+City:- pune State:- Mh
+Zip code:- 345678
+
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

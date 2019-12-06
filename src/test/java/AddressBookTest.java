@@ -3,6 +3,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 
 public class AddressBookTest {
@@ -10,14 +11,14 @@ public class AddressBookTest {
     IAddressBook iAddressBook = new AddressBookImplementation();
     @Test
     public void givenPersonInWrittenToJson_Should_ReturnTrue() throws FileNotFoundException {
-        Person person = new Person("yamini ", "Mhatre","9405205089","Pune ", 100345, "Mh");
+        Person person = new Person("yamini ", "Mhatre","9405205089","G.T.P colony","pune",345678,"Mh");
         boolean result =iAddressBook.addPerson(person, "/home/admin142/eclipse-workspace/AddressBook2/src/main/resources/Person.json");
         Assert.assertEquals(true, result);
 
     }
     @Test
     public void givenPersonDetails_When_EdittedSuccessfully_Should_ReturnTrue() throws FileNotFoundException {
-        Person person = new Person("swati", "More", "94052050566", "Pune", 556782, "MH");
+        Person person = new Person("swati", "More", "94052050566", "Om Nagar","dhule",563457,"MH");
         boolean result = iAddressBook.editPerson(person, "9405205050");
         Assert.assertTrue(result);
     }
@@ -42,6 +43,12 @@ public class AddressBookTest {
         List<Person> personList = iAddressBook.sortByZip();
         Assert.assertEquals(556782,personList.get(0).getZip());
     }
+    @Test
+    public void givenPersonDetail_WhenProperPrintAllRecord_ShouldReturnTrue() throws IOException {
+        boolean result=iAddressBook.printAllRecord();
+        Assert.assertEquals(true, result);
+    }
+
 
 
 }

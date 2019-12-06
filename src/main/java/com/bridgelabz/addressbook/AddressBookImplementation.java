@@ -38,6 +38,7 @@ public class AddressBookImplementation implements IAddressBook {
                 editPerson.setFirstName(person.getFirstName());
                 editPerson.setLastName(person.getLastName());
                 editPerson.setPhoneNumber(person.getPhoneNumber());
+                editPerson.setAddress(person.getAddress());
                 editPerson.setCity(person.getCity());
                 editPerson.setZip(person.getZip());
                 utility.writeIntoJsonFile(personList);
@@ -105,12 +106,27 @@ public class AddressBookImplementation implements IAddressBook {
         utility.writeIntoJsonFile(personList);
         return personList;
     }
-
+    @Override
+    public boolean printAllRecord() throws IOException {
+        List<Person> personList = utility.readAllPersonsAddressList();
+        for (Person person : personList) {
+            System.out.println("First Name:- "+person.getFirstName()+" Last Name:- "+person.getLastName());
+            System.out.println("Phone Number:"+person.getPhoneNumber());
+            System.out.println("Address:- "+person.getAddress());
+            System.out.println("City:- "+person.getCity()+" State:- "+person.getState());
+            System.out.println("Zip code:- "+person.getZip());
+            System.out.println();
+        }
+        return true;
+    }
     @Override
     public void readAllPersons() throws FileNotFoundException, MalformedJsonException {
         utility.readList();
 
     }
+
+
+
 }
 
 
