@@ -48,6 +48,15 @@ public class AddressBookTest {
         boolean result=iAddressBook.printAllRecord();
         Assert.assertEquals(true, result);
     }
+    @Test
+    public void givenFileName_WhenCreatedSuccessfully_Should_ReturnTrue() throws CustomException {
+        boolean result = iAddressBook.createNewAddressBook("newFile2");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void givenNewFileName_WhenStringNull_throwsException() throws Exception{
+        Assert.assertFalse(iAddressBook.createNewAddressBook(null));
+    }
 
 
 
