@@ -10,7 +10,7 @@ import java.util.List;
 
 public class AddressBookImplementation implements IAddressBook {
 
-    String resourcePath="/home/admin142/eclipse-workspace/AddressBook2/src/main/resources/";
+    String resourceFilePath="/home/admin142/eclipse-workspace/AddressBook2/src/main/resources/";
     Utility utility;
     {
         try {
@@ -123,7 +123,7 @@ public class AddressBookImplementation implements IAddressBook {
     public boolean createNewAddressBook(String fileName) throws CustomException {
         try
         {
-            File file = new File(resourcePath + fileName + ".json");
+            File file = new File(resourceFilePath + fileName + ".json");
             if (fileName.length() == 0)
             {
                 throw new CustomException("File cannot be empty");
@@ -140,6 +140,18 @@ public class AddressBookImplementation implements IAddressBook {
             return false;
         }
     }
+    @Override
+    public boolean openExistingAddressBook(String fileName) {
+
+        File file = new File(resourceFilePath + fileName);
+        if (file.exists()) {
+            Utility.readingAddressBook(resourceFilePath + fileName);
+            return true;
+        }
+        return false;
+
+    }
+
     @Override
     public void readAllPersons() throws FileNotFoundException, MalformedJsonException {
         utility.readList();

@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Utility {
 
-    public static final String FilePath ="/home/admin142/eclipse-workspace/AddressBook2/src/main/resources/Person.json";
+    public static final String FilePath ="/home/admin142/eclipse-workspace/AddressBook2/src/main/resources/Firstjson.json";
     List<Person> personList = new ArrayList<>();
     Gson gson = new Gson();
     BufferedReader br = new BufferedReader(new FileReader(FilePath));
@@ -52,6 +52,18 @@ public class Utility {
         }
 
         return false;
+    }
+    public static void readingAddressBook(String filePath) {
+        try {
+            Gson gson = new Gson();
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath));
+            Person[] peoples = gson.fromJson(bufferedReader, Person[].class);
+            for (int i = 0; i < peoples.length; i++) {
+                System.out.println(peoples[i]);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
     public boolean readList() throws FileNotFoundException {
 

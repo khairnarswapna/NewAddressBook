@@ -11,13 +11,13 @@ public class AddressBookTest {
     IAddressBook iAddressBook = new AddressBookImplementation();
     @Test
     public void givenPersonInWrittenToJson_Should_ReturnTrue() throws FileNotFoundException {
-        Person person = new Person("yamini ", "Mhatre","9405205089","G.T.P colony","pune",345678,"Mh");
-        boolean result =iAddressBook.addPerson(person, "/home/admin142/eclipse-workspace/AddressBook2/src/main/resources/Person.json");
+        Person person = new Person("Dhamini  ", "patil","9405205089","G.T.P colony","pune",345678,"Mh");
+        boolean result =iAddressBook.addPerson(person, "/home/admin142/eclipse-workspace/AddressBook2/src/main/resources/newFile.json");
         Assert.assertEquals(true, result);
 
     }
     @Test
-    public void givenPersonDetails_When_EdittedSuccessfully_Should_ReturnTrue() throws FileNotFoundException {
+    public void givenPersonDetails_When_Editted_Successfully_Should_ReturnTrue() throws FileNotFoundException {
         Person person = new Person("swati", "More", "94052050566", "Om Nagar","dhule",563457,"MH");
         boolean result = iAddressBook.editPerson(person, "9405205050");
         Assert.assertTrue(result);
@@ -56,6 +56,16 @@ public class AddressBookTest {
     @Test
     public void givenNewFileName_WhenStringNull_throwsException() throws Exception{
         Assert.assertFalse(iAddressBook.createNewAddressBook(null));
+    }
+    @Test
+    public void givenFileName_WhenExist_Should_Open_And_ReturnTrue() throws CustomException {
+        boolean result=iAddressBook.openExistingAddressBook("Firstjson.json");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void givenFile_doesNotExiest_shouldReturnException() throws CustomException {
+        boolean result=iAddressBook.openExistingAddressBook("abc.json");
+        Assert.assertTrue(result);
     }
 
 
