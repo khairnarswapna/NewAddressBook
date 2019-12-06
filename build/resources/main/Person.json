@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "firstName": "pooja",
+    "lastName": "Desale",
+    "phoneNumber": "9405205050",
+    "city": "Dhule  ",
+    "zip": "100345",
+    "state": "Mh"
+  },
+  {
+    "firstName": "sweta",
+    "lastName": "patil",
+    "phoneNumber": "94052050567",
+    "city": "Pune",
+    "zip": "556782",
+    "state": "Mh"
+  }
+]

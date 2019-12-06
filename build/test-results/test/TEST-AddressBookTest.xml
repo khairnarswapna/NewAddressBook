@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T05:43:21" hostname="admin142-desktop" time="0.005">
+<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T06:55:39" hostname="admin142-desktop" time="0.007">
   <properties/>
-  <testcase name="givenPersonInFo_When_WrittenToJson_Should_ReturnTrue" classname="AddressBookTest" time="0.005"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="givenPersonDetails_When_EdittedSuccessfully_Should_ReturnTrue" classname="AddressBookTest" time="0.007"/>
+  <system-out><![CDATA[Person{firstName='pooja', lastName='Desale', phoneNumber='9405205050', city='Dhule  ', zip='100345', state='Mh'}
+Person{firstName='sweta', lastName='patil', phoneNumber='94052050567', city='Pune', zip='556782', state='Mh'}
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

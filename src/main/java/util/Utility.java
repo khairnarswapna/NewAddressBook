@@ -2,7 +2,7 @@ package util;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import model.Person;
+import com.bridgelabz.addressbook.Person;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -61,4 +61,13 @@ public class Utility {
         }
         return true;
     }
+    public List<Person> readAllPersonsAddressList()   {
+
+        for (int i = 0; i < personDetails.length; i++) {
+            personList.add(personDetails[i]);
+            System.out.println(personDetails[i]);
+        }
+        return personList;
+    }
+
 }

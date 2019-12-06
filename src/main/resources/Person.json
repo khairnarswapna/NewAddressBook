@@ -1,12 +1,18 @@
 [
   {
-    "firstName": "puja",
-    "lastName": "Patil",
-    "address": {
-      "city": "dhule  ",
-      "zip": "100345",
-      "state": "Mh"
-    },
-    "phoneNumber": "9405205050"
+    "firstName": "swati",
+    "lastName": "More",
+    "phoneNumber": "94052050566",
+    "city": "Pune",
+    "zip": "556782",
+    "state": "Mh"
+  },
+  {
+    "firstName": "sweta",
+    "lastName": "patil",
+    "phoneNumber": "94052050567",
+    "city": "Pune",
+    "zip": "556782",
+    "state": "Mh"
   }
 ]
