@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T05:43:21" hostname="admin142-desktop" time="0.005">
+  <properties/>
+  <testcase name="givenPersonInFo_When_WrittenToJson_Should_ReturnTrue" classname="AddressBookTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

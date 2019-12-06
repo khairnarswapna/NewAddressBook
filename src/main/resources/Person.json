@@ -1,0 +1,12 @@
+[
+  {
+    "firstName": "puja",
+    "lastName": "Patil",
+    "address": {
+      "city": "dhule  ",
+      "zip": "100345",
+      "state": "Mh"
+    },
+    "phoneNumber": "9405205050"
+  }
+]
