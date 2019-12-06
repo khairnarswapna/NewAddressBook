@@ -27,7 +27,7 @@ public class AddressBookImplementation implements IAddressBook {
     }
     @Override
     public boolean editPerson(Person person, String mobileNo) throws FileNotFoundException {
-        int isAvailable = 0;
+        int isDetailsAvailable = 0;
         List<Person> personList = utility.readAllPersonsAddressList();
         for (Person editPerson : personList) {
             if (editPerson.getPhoneNumber().equals(mobileNo)) {
@@ -37,16 +37,40 @@ public class AddressBookImplementation implements IAddressBook {
                 editPerson.setCity(person.getCity());
                 editPerson.setZip(person.getZip());
                 utility.writeIntoJsonFile(personList);
-                isAvailable= 1;
+                isDetailsAvailable= 1;
                 break;
             }
         }
-        if (isAvailable== 1) {
+        if (isDetailsAvailable== 1) {
             return true;
         } else
             return false;
     }
+    @Override
+    public boolean deletePerson(String mobileNumber) throws FileNotFoundException, CustomException {
+        int isDetailsAvailable = 0;
+        try {
+            List<Person> personList = utility.readAllPersonsAddressList();
+            for (Person person : personList) {
+                if (person.getPhoneNumber().equals(mobileNumber)) {
+                    personList.remove(person);
+                    utility.writeIntoJsonFile(personList);
+                     isDetailsAvailable= 1;
+                    break;
+                }
+            }
+            if (isDetailsAvailable == 1)
+                return true;
+            else{
+                throw new CustomException("Problem is there while removing persondetails from AddressBook");
+            }
 
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new CustomException("Problem is there while removing persondetails from AddressBook");
+        }
+
+    }
     @Override
     public void readAllPersons() throws FileNotFoundException, MalformedJsonException {
         utility.readList();

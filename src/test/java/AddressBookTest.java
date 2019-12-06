@@ -1,7 +1,4 @@
-import com.bridgelabz.addressbook.AddressBookImplementation;
-import com.bridgelabz.addressbook.IAddressBook;
-import com.bridgelabz.addressbook.Address;
-import com.bridgelabz.addressbook.Person;
+import com.bridgelabz.addressbook.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,7 +9,7 @@ public class AddressBookTest {
     IAddressBook iAddressBook = new AddressBookImplementation();
     @Test
     public void givenPersonInWrittenToJson_Should_ReturnTrue() throws FileNotFoundException {
-        Person person = new Person("leena", "Patil","9405205050","Dhule  ", "100345", "Mh");
+        Person person = new Person("yamini ", "Mhatre","9405205089","Pune ", "100345", "Mh");
         boolean result =iAddressBook.addPerson(person, "/home/admin142/eclipse-workspace/AddressBook2/src/main/resources/Person.json");
         Assert.assertEquals(true, result);
 
@@ -23,6 +20,15 @@ public class AddressBookTest {
         boolean result = iAddressBook.editPerson(person, "9405205050");
         Assert.assertTrue(result);
     }
-
+    @Test
+    public void givenMobileNumber_WhenPresent_ShouldRemovePersonDetails_FromAddressBook() throws FileNotFoundException, CustomException {
+        boolean result =iAddressBook.deletePerson("9405205050");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void givenMobileNumber_WhenDetails_Notavilable_whileRemovingRecord_ThrowException() throws FileNotFoundException, CustomException {
+        boolean result =iAddressBook.deletePerson("9405205050");
+        Assert.assertTrue(result);
+    }
 
 }
