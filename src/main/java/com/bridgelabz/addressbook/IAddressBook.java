@@ -12,7 +12,7 @@ public interface IAddressBook {
         boolean printAllRecord() throws IOException;
         boolean createNewAddressBook(String fileName) throws CustomException;
         boolean openExistingAddressBook(String fileName) throws CustomException;
-
+        boolean saveAddressBook(String fileName);
         List<Person> sortByLastName() throws IOException;
         List<Person> sortByZip() throws IOException;
         public void readAllPersons()throws Exception;

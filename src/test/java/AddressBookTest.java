@@ -1,6 +1,7 @@
 import com.bridgelabz.addressbook.*;
 import org.junit.Assert;
 import org.junit.Test;
+import util.Utility;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -66,6 +67,9 @@ public class AddressBookTest {
     public void givenFile_doesNotExiest_shouldReturnException() throws CustomException {
         boolean result=iAddressBook.openExistingAddressBook("abc.json");
         Assert.assertTrue(result);
+    }
+    @Test public void givenFileName_When_OpeneSaveTheDetails_Should_ReturnTrue() {
+        boolean result = iAddressBook.saveAddressBook(Utility.resourceFilePath+"newFile");
     }
 
 

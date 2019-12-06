@@ -11,6 +11,7 @@ import java.util.List;
 public class Utility {
 
     public static final String FilePath ="/home/admin142/eclipse-workspace/AddressBook2/src/main/resources/Firstjson.json";
+    public static final String resourceFilePath="/home/admin142/eclipse-workspace/AddressBook2/src/main/resources/";
     List<Person> personList = new ArrayList<>();
     Gson gson = new Gson();
     BufferedReader br = new BufferedReader(new FileReader(FilePath));
@@ -19,7 +20,6 @@ public class Utility {
 
     public Utility() throws FileNotFoundException {
     }
-
     public boolean writeIntoJsonFile(Person person) throws FileNotFoundException {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         readList();
@@ -65,6 +65,22 @@ public class Utility {
             e.printStackTrace();
         }
     }
+
+    public static boolean SavedIntoAddressBook(String fileName, List<Person> personList) {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        //  personList.add(persons);
+        String json = gson.toJson(personList);
+        FileWriter fileWriter = null;
+        try {
+            fileWriter = new FileWriter(fileName);
+            fileWriter.write(json);
+            fileWriter.close();
+            return true;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
     public boolean readList() throws FileNotFoundException {
 
         for (int i = 0; i < personDetails.length; i++) {
@@ -72,6 +88,12 @@ public class Utility {
             System.out.println(personDetails[i]);
         }
         return true;
+    }
+    public static List<Person> getSavedRecord() {
+        List<Person> personList = new ArrayList<>();
+        personList.add(new Person("swati", "Desale", "9405205070", "G.T.P colony", "pune", 224534,"MH"));
+        personList.add(new Person("Swati", "More", "46613260255", "Om Nagar", "Nashik", 234567,"MH"));
+        return personList;
     }
     public List<Person> readAllPersonsAddressList()   {
 

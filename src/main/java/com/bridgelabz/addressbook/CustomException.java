@@ -11,7 +11,6 @@ public class CustomException extends Exception{
         super(message);
 
     }
-
     public CustomException(String message, ExceptionType type) {
         this.message = message;
         this.type = type;
