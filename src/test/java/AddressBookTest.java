@@ -3,6 +3,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
+import java.util.List;
 
 public class AddressBookTest {
 
@@ -30,5 +31,13 @@ public class AddressBookTest {
         boolean result =iAddressBook.deletePerson("9405205050");
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void sortAddressbook_ByLastname_ShouldReturnExpectedValue() throws Exception {
+        List<Person> personList = iAddressBook.sortByLastName();
+        Assert.assertEquals("Mhatre",personList.get(0).getLastName());
+    }
+
+
 
 }

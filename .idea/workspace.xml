@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="33016a5c-743e-43dc-962e-4b13a0eba878" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bridgelabz/addressbook/CustomException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -67,7 +66,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JunitAddressBook" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -84,7 +83,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AddressBookTest.givenMobileNumber_WhenNotavilable_whileRemovingRecord_ExceptionShown">
+  <component name="RunManager" selected="Gradle.AddressBookTest.sortAddressbook_ByLastname_ShouldReturnExpectedValue">
     <configuration name="AddressBookTest.givenMobileNumber_WhenNotavilable_whileRemovingRecord_ExceptionShown" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -145,26 +144,6 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AddressBookTest.givenPersonInFo_When_WrittenToJson_Should_ReturnTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;AddressBookTest.givenPersonInFo_When_WrittenToJson_Should_ReturnTrue&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="AddressBookTest.givenPersonInWrittenToJson_Should_ReturnTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -185,13 +164,33 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="AddressBookTest.sortAddressbook_ByLastname_ShouldReturnExpectedValue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;AddressBookTest.sortAddressbook_ByLastname_ShouldReturnExpectedValue&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AddressBookTest.sortAddressbook_ByLastname_ShouldReturnExpectedValue" />
         <item itemvalue="Gradle.AddressBookTest.givenMobileNumber_WhenNotavilable_whileRemovingRecord_ExceptionShown" />
         <item itemvalue="Gradle.AddressBookTest.givenPersonInWrittenToJson_Should_ReturnTrue" />
         <item itemvalue="Gradle.AddressBookTest.givenPersonDetails_When_EdittedSuccessfully_Should_ReturnTrue" />
         <item itemvalue="Gradle.AddressBookTest.givenMobileNumber_WhenPresent_ShouldRemovePersonDetails_FromAddressBook" />
-        <item itemvalue="Gradle.AddressBookTest.givenPersonInFo_When_WrittenToJson_Should_ReturnTrue" />
       </list>
     </recent_temporary>
   </component>
