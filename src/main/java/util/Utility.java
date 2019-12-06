@@ -92,7 +92,7 @@ public class Utility {
     public static List<Person> getSavedRecord() {
         List<Person> personList = new ArrayList<>();
         personList.add(new Person("swati", "Desale", "9405205070", "G.T.P colony", "pune", 224534,"MH"));
-        personList.add(new Person("Swati", "More", "46613260255", "Om Nagar", "Nashik", 234567,"MH"));
+        personList.add(new Person("Neha", "More", "46613260255", "Om Nagar", "Nashik", 234567,"MH"));
         return personList;
     }
     public List<Person> readAllPersonsAddressList()   {

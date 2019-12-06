@@ -68,8 +68,8 @@ public class AddressBookTest {
         boolean result=iAddressBook.openExistingAddressBook("abc.json");
         Assert.assertTrue(result);
     }
-    @Test public void givenFileName_When_OpeneSaveTheDetails_Should_ReturnTrue() {
-        boolean result = iAddressBook.saveAddressBook(Utility.resourceFilePath+"newFile");
+    @Test public void givenFileName_When_OpenFileSaveTheDetails_Should_ReturnTrue() {
+        boolean result = iAddressBook.saveAddressBook(Utility.resourceFilePath+"newFile2");
     }
 
 

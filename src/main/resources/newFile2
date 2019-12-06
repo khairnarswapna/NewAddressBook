@@ -1,0 +1,20 @@
+[
+  {
+    "firstName": "swati",
+    "lastName": "Desale",
+    "phoneNumber": "9405205070",
+    "Address": "G.T.P colony",
+    "city": "pune",
+    "zip": 224534,
+    "state": "MH"
+  },
+  {
+    "firstName": "Neha",
+    "lastName": "More",
+    "phoneNumber": "46613260255",
+    "Address": "Om Nagar",
+    "city": "Nashik",
+    "zip": 234567,
+    "state": "MH"
+  }
+]
