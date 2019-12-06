@@ -121,25 +121,21 @@ public class AddressBookImplementation implements IAddressBook {
     }
     @Override
     public boolean createNewAddressBook(String fileName) throws CustomException {
-        try
-        {
+        try {
             File file = new File(resourceFilePath + fileName + ".json");
-            if (fileName.length() == 0)
-            {
+            if (fileName.length() == 0) {
                 throw new CustomException("File cannot be empty");
 
-            }
-            else if(file.createNewFile())
+            } else if (file.createNewFile())
                 return true;
             else
                 throw new CustomException("File Cannot be created");
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             return false;
         }
     }
+
     @Override
     public boolean openExistingAddressBook(String fileName) {
 
