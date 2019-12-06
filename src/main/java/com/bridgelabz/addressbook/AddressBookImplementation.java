@@ -19,7 +19,6 @@ public class AddressBookImplementation implements IAddressBook {
             e.printStackTrace();
         }
     }
-   // List<Person> personList = new ArrayList<>();
     @Override
     public boolean addPerson(Person person, String filePath) {
 
@@ -122,19 +121,18 @@ public class AddressBookImplementation implements IAddressBook {
     }
     @Override
     public boolean createNewAddressBook(String fileName) throws CustomException {
-
         try
         {
             File file = new File(resourcePath + fileName + ".json");
             if (fileName.length() == 0)
             {
-                throw new CustomException("File cannot be empty...");
+                throw new CustomException("File cannot be empty");
 
             }
             else if(file.createNewFile())
                 return true;
             else
-                throw new CustomException("File Cannot be created..");
+                throw new CustomException("File Cannot be created");
         }
         catch (Exception e)
         {
