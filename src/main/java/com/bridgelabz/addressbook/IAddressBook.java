@@ -13,6 +13,7 @@ public interface IAddressBook {
         boolean createNewAddressBook(String fileName) throws CustomException;
         boolean openExistingAddressBook(String fileName) throws CustomException;
         boolean saveAddressBook(String fileName);
+        boolean saveAs(String oldName, String newName);
         List<Person> sortByLastName() throws IOException;
         List<Person> sortByZip() throws IOException;
         public void readAllPersons()throws Exception;

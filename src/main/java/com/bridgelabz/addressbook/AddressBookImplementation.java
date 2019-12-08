@@ -67,12 +67,12 @@ public class AddressBookImplementation implements IAddressBook {
             if (isDetailsAvailable == 1)
                 return true;
             else{
-                throw new CustomException("Problem is there while removing person details from AddressBook");
+                throw new CustomException(CustomException.ExceptionType.PERSON_NOT_FOUND,"person record not found");
             }
 
         } catch (Exception e) {
             e.printStackTrace();
-            throw new CustomException("Problem is there while removing persondetails from AddressBook");
+            throw new CustomException(CustomException.ExceptionType.PERSON_NOT_FOUND,"person record not found");
         }
 
     }
@@ -140,10 +140,10 @@ public class AddressBookImplementation implements IAddressBook {
 
         File file = new File(resourceFilePath + fileName);
         if (file.exists()) {
-            Utility.readingAddressBook(resourceFilePath + fileName);
+             Utility.readingAddressBook(resourceFilePath + fileName);
             return true;
         }
-        return false;
+        throw new CustomException(CustomException.ExceptionType.ADDRESSBOOK_DOESNOT_EXIST, "given name addressbook does not exist");
 
     }
     @Override
@@ -152,6 +152,19 @@ public class AddressBookImplementation implements IAddressBook {
         boolean IsSaveRecord = Utility.SavedIntoAddressBook(fileName, personList);
         if (IsSaveRecord)
             return true;
+        else
+            throw new CustomException(CustomException.ExceptionType.DADA_NOT_SAVED, "data not saved");
+
+    }
+    @Override
+    public boolean saveAs(String oldName, String newName)
+    {
+        File oldFile = new File(resourceFilePath + oldName);
+        if (oldFile.exists()) {
+            File newFileName = new File(resourceFilePath + newName + ".json");
+            oldFile.renameTo(newFileName);
+            return true;
+        }
         return false;
     }
     @Override

@@ -29,11 +29,15 @@ public class AddressBookTest {
         Assert.assertTrue(result);
     }
     @Test
-    public void givenMobileNumber_WhenDetails_Notavilable_whileRemovingRecord_ThrowException() throws FileNotFoundException, CustomException {
-        boolean result =iAddressBook.deletePerson("9405205050");
-        Assert.assertTrue(result);
-    }
+    public void givenMobileNumber_removePersonDetailsFromAddressbook_ButPersonDoesNotExist_ShouldReturnOne() throws IOException {
+        try {
+            boolean result = iAddressBook.deletePerson("9405205089");
+            Assert.assertTrue(result);
+        } catch (CustomException e) {
+            Assert.assertEquals(CustomException.ExceptionType.PERSON_NOT_FOUND, e.type);
+        }
 
+    }
     @Test
     public void sortAddressbook_ByLastname_ShouldReturnExpectedValue() throws Exception {
         List<Person> personList = iAddressBook.sortByLastName();
@@ -64,14 +68,23 @@ public class AddressBookTest {
         Assert.assertTrue(result);
     }
     @Test
-    public void givenFile_doesNotExiest_shouldReturnException() throws CustomException {
-        boolean result=iAddressBook.openExistingAddressBook("abc.json");
-        Assert.assertTrue(result);
+    public void openAddressBook_AddressbookNameDoesNotExist_ShouldThrowException(){
+        try {
+            boolean result=iAddressBook.openExistingAddressBook("abc");
+            Assert.assertTrue(result);
+        } catch (CustomException e) {
+            Assert.assertEquals(CustomException.ExceptionType.ADDRESSBOOK_DOESNOT_EXIST, e.type);
+        }
     }
     @Test public void givenFileName_When_OpenFileSaveTheDetails_Should_ReturnTrue() {
         boolean result = iAddressBook.saveAddressBook(Utility.resourceFilePath+"newFile2");
+        Assert.assertTrue(result);
     }
-
+    @Test
+    public void givenFileName_When_OpenedAndEdited_Should_BeAble_SaveAsWithNewName_Return_True() {
+        boolean result = iAddressBook.saveAs("newFile2.json", "newFile");
+        Assert.assertTrue(result);
+    }
 
 
 }

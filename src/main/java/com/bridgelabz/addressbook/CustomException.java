@@ -2,10 +2,15 @@ package com.bridgelabz.addressbook;
 
 public class CustomException extends Exception{
 
-    ExceptionType type;
+    public ExceptionType type;
     private String message;
-    enum ExceptionType {
-          WRONG_FILE_TYPE,NO_SUCH_FILE, WRONG_DATA_FORMAT
+
+    public enum ExceptionType {
+        PERSON_NOT_FOUND, DADA_NOT_SAVED, ADDRESSBOOK_DOESNOT_EXIST,IO_EXCEPTION, NO_SUCH_FIELD, CANNOT_ACCESS_FILE_DATA, FILE_NOT_FOUND
+    }
+    public CustomException(ExceptionType type,String message) {
+        super(message);
+        this.type=type;
     }
     public CustomException(String message) {
         super(message);
@@ -15,30 +20,5 @@ public class CustomException extends Exception{
         this.message = message;
         this.type = type;
     }
-
-    public CustomException(String message, String message1, ExceptionType type) {
-        super(message);
-        this.message = message1;
-        this.type = type;
-    }
-
-    public CustomException(String message, Throwable cause, String message1, ExceptionType type) {
-        super(message, cause);
-        this.message = message1;
-        this.type = type;
-    }
-
-    public CustomException(Throwable cause, String message, ExceptionType type) {
-        super(cause);
-        this.message = message;
-        this.type = type;
-    }
-
-    public CustomException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace, String message1, ExceptionType type) {
-        super(message, cause, enableSuppression, writableStackTrace);
-        this.message = message1;
-        this.type = type;
-    }
-
 
 }
